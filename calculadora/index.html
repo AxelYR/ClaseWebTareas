@@ -20,28 +20,28 @@
             <!-- botones de la Calculadora -->
             <div class="flex flex-row flex-wrap justify-between">
                 <div class="size-32 w-150 bg-sky-50 text-center">
-                    <p id="resultado" class="text-6xl"></p>
+                    <p class="resultado text-6xl"></p>
                 </div>
-                <button onclick='reiniciar()' class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">ce</button>
-                <button onclick='borrar()' class="btn cursor-pointer bg-purple-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-purple-700 transition duration-150">⌫</button>
-                <button onclick='digitar()' class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">%</button>
-                <button onclick='digitar()' class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">÷</button>
-                <button onclick='digitar()' class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">7</button>
-                <button onclick='digitar()' class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">8</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">9</button>
-                <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">x</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">4</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">5</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">6</button>
+                <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150" id="reiniciar">ce</button>
+                <button class="btn cursor-pointer bg-purple-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-purple-700 transition duration-150" id="borrar">⌫</button>
+                <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150" >%</button>
+                <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150" >÷</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >7</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >8</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >9</button>
+                <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">*</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >4</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >5</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >6</button>
                 <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">-</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">1</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">2</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">3</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >1</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >2</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" >3</button>
                 <button class="btn cursor-pointer bg-green-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-green-700 transition duration-150">+</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">.</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">0</button>
-                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150">π</button>
-                <button class="btn cursor-pointer bg-red-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-red-700 transition duration-150">=</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" id="punto">.</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" id="0">0</button>
+                <button class="btn cursor-pointer bg-blue-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-blue-700 transition duration-150" id="pi">π</button>
+                <button class="btn cursor-pointer bg-red-500 text-white text-3xl w-30 h-20 m-3 rounded-md active:bg-red-700 transition duration-150" id="resultado">=</button>
             </div>
         </div>
         </div>
