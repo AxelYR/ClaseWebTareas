@@ -9,8 +9,6 @@ botones.forEach(boton => {
             resultado.textContent= Math.PI;
             return
         }
-
-
         if(boton.id === "reiniciar") {
             resultado.textContent = "0";
             return;
@@ -27,7 +25,19 @@ botones.forEach(boton => {
 
         if (boton.id === "resultado") {
             try {
+                //se almacena la operacion 
+                localStorage.setItem("operacion", resultado.textContent);
+                //se realiza la operacion   //eval es peligroso
                 resultado.textContent = eval(resultado.textContent);
+                //se almacena el resultado
+                localStorage.setItem("resultado", resultado.textContent);
+                //se crea un elemento p
+                const operacion = document.createElement("p");
+                //se escribe dentro del elemento p la operacion almacenada, se concatena con un
+                //signo de = y el resultado almacenado en la memoria
+                operacion.innerHTML = ">" + localStorage.getItem("operacion")+" = "+localStorage.getItem("resultado");
+                //el elemento se coloca en el area de historial
+                document.getElementById("resultados").appendChild(operacion);
             } catch {
                 resultado.textContent = "ERROR!";
             }
