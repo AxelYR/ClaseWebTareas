@@ -17,23 +17,23 @@
     </head>
     <main>
         <div class="flex justify-center m-3">
-            <form action="/action_page.php">
+            <form>
                 <label class="text-3xl subpixel-antialiased" for="fname"> Nombre:</label><br>
-                <input class="w-100 h-10 border-3" type="text" id="fname" name="fname" value=""><br>
+                <input class="input h-10 border-3" type="text" id="fname" name="fname"><br>
                 <label class="text-3xl subpixel-antialiased" for="lemail"> email:</label><br>
-                <input class="w-100 h-10 border-3" type="email" id="lemail" name="lname" value=""><br>
+                <input class="input h-10 border-3" type="email" id="lemail" name="lemail"><br>
                 <label class="text-3xl subpixel-antialiased" for="lphone"> Telefono:</label><br>
-                <input class="w-100 h-10 border-3" type="tel" id="lphone" name="lname" value=""><br><br>
-                <button onclick="registro()" class="cursor-pointer bg-green-500 text-white text-3xl w-50 h-20 m-3 rounded-md active:bg-green-700 transition duration-150"
-                type="button">Registrate</button>
+                <input class="input h-10 border-3" type="tel" id="lphone" name="lphone"><br><br>
+                <button class="cursor-pointer bg-green-500 text-white text-3xl w-50 h-20 m-3 rounded-md active:bg-green-700 transition duration-150"
+                type="button" onclick="enviar()">Registrate</button>
             </form>
         </div>
-        <div class="flex justify-center w">
-            <table class="border-3 w-300 h-10" id="tablaRegistros">
-                <tr>
-                <td class="border-3">Nombre</td>
-                <td class="border-3 w-100">email</td>
-                <td class="border-3 " >Telefono</td>
+        <div class="flex justify-center w" id="tablaRegistros">
+            <table class="border-3 w-300 h-10">
+                <tr class="border-3">
+                    <td>Nombre</td>
+                    <td class="w-100">email</td>
+                    <td>Telefono</td>
                 </tr>
             </table>
         </div>
